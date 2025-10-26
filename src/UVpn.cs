@@ -32,9 +32,7 @@ namespace UVpnApi
             var content = await response.Content.ReadAsStringAsync();
             using var document = JsonDocument.Parse(content);
             var documentData = document.RootElement.GetProperty("data");
-
             string? Get(string name) => documentData.TryGetProperty(name, out var element) ? element.GetString() : null;
-
             (authToken, deviceToken, proxyToken, urlToken) = (
                 Get("auth_token"),
                 Get("device_token"),
