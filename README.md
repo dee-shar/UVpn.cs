@@ -3,7 +3,6 @@ Web-API for [uvpn.me](https://uvpn.me) that will give you private internet acces
 
 ## Example
 ```cs
-using System;
 using UVpnApi;
 
 namespace Application
