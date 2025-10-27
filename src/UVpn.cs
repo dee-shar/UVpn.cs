@@ -49,11 +49,13 @@ namespace UVpnApi
             var response = await httpClient.PostAsync($"{apiUrl}/v2/servers/ping", data);
             return await response.Content.ReadAsStringAsync();
         }
+        
         public async Task<string> GetAccountInfo()
         {
             var response = await httpClient.PostAsync($"{apiUrl}/user/info", null);
             return await response.Content.ReadAsStringAsync();
         }
+        
         public async Task<string> GetNotifications()
         {
             var response = await httpClient.PostAsync($"{apiUrl}/notifications/list", null);
